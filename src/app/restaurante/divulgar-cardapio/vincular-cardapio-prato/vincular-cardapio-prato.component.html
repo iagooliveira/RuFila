@@ -1,0 +1,61 @@
+<mat-toolbar class="toolbar">
+    <img class="img-toolbar" src="assets/header.png" alt="" />
+  </mat-toolbar>
+  
+  <section class="section-principal">
+    <div class="container-imagem-logo">
+      <img class="logo-ruFila" src="assets/logo.png" alt="" />
+    </div>
+    <app-botao-voltar [rota]='rotaVoltar'></app-botao-voltar>
+    <div class="dados-cardapio">
+      <div class="container-selects">
+        <mat-form-field appearance="fill" class="fild-container">
+          <mat-label class="label-select-restaurante">Restaurante</mat-label>
+          <mat-select class="select-restaurante" [formControl]="formsCardapio" >
+            <mat-option
+              class="option-restaurante"
+              *ngFor="let cardapio of listaCardapios"
+              [value]="cardapio.codigo"
+              (click)="onSelecionaCardapios(cardapio.restaurante_codigo)"
+              >{{ cardapio.restaurante_codigo }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="fild-container">
+          <mat-label class="label-select-restaurante">Data do Cardápio</mat-label>
+          <mat-select class="select-restaurante">
+            <mat-option
+              class="option-restaurante"
+              *ngFor="let data of listaDatas"
+              [value]="data.codigo"
+              >{{ data.data_cardapio }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="fild-container">
+            <mat-label class="label-select-restaurante">Refeição</mat-label>
+            <mat-select class="select-restaurante" [formControl]="formsPrato" >
+              <mat-option
+                class="option-restaurante"
+                *ngFor="let prato of listaPratos"
+                [value]="prato.codigo"
+                (click)="openDialog(prato.codigo)"
+                >{{ prato.codigo }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+          <button
+          class="btn-cadastrar-cardapio"
+          mat-raised-button
+          (click)="onVinculaCardapio()"
+        >
+          Adicionar
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="container-footer">
+    <img class="imagem-footer" src="assets/footer.png" alt="" />
+  </footer>
+  
+

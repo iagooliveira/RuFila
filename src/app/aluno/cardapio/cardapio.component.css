@@ -1,0 +1,31 @@
+::ng-deep.mat-dialog-container {
+  border-radius: 10px;
+
+  background: #2644ea;
+}
+
+.titulo-cardapio {
+  text-align: center;
+  color: white;
+  font-family: "Poppins";
+}
+
+.container-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.paragrafo-item-cardapio {
+  color: white;
+  font-family: "Poppins";
+}
+
+.btn-entrarFila {
+  margin-top: 2rem;
+  border-radius: 5px;
+  font-family: "Poppins";
+  color: black;
+}

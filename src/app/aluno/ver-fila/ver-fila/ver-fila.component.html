@@ -1,0 +1,35 @@
+
+
+
+<section class="section-principal">
+    <div class="container-imagem-logo">
+      <img class="logo-ruFila" src="assets/logo.png" alt="" />
+    </div>
+    <p class="tempoAteProx">Tempo até o próximo: <span class="contador">{{contadorFila}}</span></p>
+    <app-botao-voltar [rota]='rotaVoltar' (click)="apagarIntervalo()"></app-botao-voltar>
+    <div class="card-dados">
+      <div class="container-input">
+
+        <p class="tituloDiv">Localidades de Restaurante:</p>
+        <div *ngIf="listaDeFilas"> 
+            <table>
+                <thead>
+                  <tr>
+                    <th>Matrícula</th>
+                    <th>Ficha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listaDeFilas">
+                    <td>{{ item.aluno_matricula }}</td>
+                    <td>{{ item.posicao }}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+
+      </div>
+  
+      
+    </div>
+  </section>

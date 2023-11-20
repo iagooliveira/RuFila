@@ -1,0 +1,42 @@
+<mat-toolbar class="toolbar">
+  <img class="img-toolbar" src="assets/header.png" alt="" />
+</mat-toolbar>
+
+<section class="section-principal">
+  <div class="container-imagem-logo">
+    <img class="logo-ruFila" src="assets/logo.png" alt="" />
+  </div>
+  <app-botao-voltar [rota]='rotaVoltar'></app-botao-voltar>
+  <div class="dados-cardapio">
+    <div class="container-selects">
+      <mat-form-field appearance="fill" class="fild-container">
+        <mat-label class="label-select-restaurante">Restaurante</mat-label>
+        <mat-select class="select-restaurante" [formControl]="formsRestaurante">
+          <mat-option
+            class="option-restaurante"
+            *ngFor="let restaurante of listaRestaurantes"
+            [value]="restaurante.codigo"
+            >{{ restaurante.nome }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="legacy" class="form-input">
+        <mat-label>Data do Cardápio</mat-label>
+        <input matInput placeholder="Data" [(ngModel)]="data" placeholder="aaaa/mm/dd" />
+      </mat-form-field>
+    </div>
+    <button
+        class="btn-cadastrar-cardapio"
+        mat-raised-button
+        (click)="onCadastraCardapio(data)"
+      >
+        Cadastrar
+      </button>
+      
+  </div>
+</section>
+
+<footer class="container-footer">
+  <img class="imagem-footer" src="assets/footer.png" alt="" />
+</footer>

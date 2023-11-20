@@ -1,0 +1,58 @@
+<mat-toolbar class="toolbar">
+    <img class="img-toolbar" src="assets/header.png" alt="" />
+  </mat-toolbar>
+  
+  <section class="section-principal">
+    <div class="container-imagem-logo">
+      <img class="logo-ruFila" src="assets/logo.png" alt="" />
+    </div>
+  
+    <div class="dados-cardapio">
+      <app-botao-voltar [rota]='rotaVoltar'></app-botao-voltar>
+      <div class="container-input">
+        <mat-form-field appearance="fill" class="fild-container">
+          <mat-label class="label-select-restaurante">Restaurante</mat-label>
+          <mat-select class="select-restaurante" [formControl]="formsRestaurante">
+            <mat-option
+              class="option-restaurante"
+              *ngFor="let restaurante of listaRestaurantes"
+              [value]="restaurante.codigo"
+              >{{ restaurante.nome }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="fild-container">
+            <mat-label class="label-select-restaurante">Funcionários</mat-label>
+            <mat-select class="select-restaurante" [formControl]="formsFuncionario">
+              <mat-option
+                class="option-restaurante"
+                *ngFor="let funcionario of listaFuncionarios"
+                [value]="funcionario.codigo"
+                >{{ funcionario.nome }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        <!--<mat-form-field appearance="legacy" class="form-input">
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Nome" [(ngModel)]="nome"/>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" class="form-input">
+          <mat-label>Data de Admissão</mat-label>
+          <input matInput placeholder="Data de Admissão" [(ngModel)]="dataAdmissao" />
+        </mat-form-field>-->
+  
+        <button
+          class="btn-cadastrar-cardapio"
+          mat-raised-button
+          (click)="onVinculaFuncionarioRestaurante()"
+        >
+          Cadastrar
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="container-footer">
+    <img class="imagem-footer" src="assets/footer.png" alt="" />
+  </footer>
+  

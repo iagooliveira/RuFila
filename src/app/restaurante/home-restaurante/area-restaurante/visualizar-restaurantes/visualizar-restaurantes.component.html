@@ -1,0 +1,23 @@
+
+
+
+  <section class="section-principal">
+    <div class="container-imagem-logo">
+      <img class="logo-ruFila" src="assets/logo.png" alt="" />
+    </div>
+    <app-botao-voltar [rota]='rotaVoltar'></app-botao-voltar>
+    <div class="card-dados">
+      <div class="container-input">
+
+        <p class="tituloDiv">Localidades de Restaurante:</p>
+        <div *ngIf="dados"> 
+            <ul>
+              <li *ngFor="let item of dados">{{ item.nome }}</li>
+            </ul>
+          </div>
+
+      </div>
+  
+      
+    </div>
+  </section>

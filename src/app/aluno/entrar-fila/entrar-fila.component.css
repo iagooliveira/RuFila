@@ -1,0 +1,114 @@
+.toolbar {
+  background: transparent;
+  width: 100%;
+}
+
+.img-toolbar {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  margin-left: -1rem;
+}
+
+.container-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.imagem-footer {
+  width: 100%;
+}
+
+.section-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35rem;
+
+  align-items: center;
+}
+
+.container-imagem-logo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-ruFila {
+  margin-top: -5rem;
+
+  width: 13rem;
+}
+
+.container-selects {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -7rem;
+}
+
+.fild-container {
+  width: 18rem;
+  border-radius: 10px;
+}
+
+.btn-cardapio {
+  background: #2644ea;
+  font-family: "Poppins";
+  color: white;
+  width: 10rem;
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+}
+
+.container-numeroFila {
+  z-index: 199;
+  background: #2644ea;
+  margin-top: -5rem;
+  width: 12rem;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  height: 8rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.num-fila {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  color: white;
+  font-weight: 600;
+
+}
+
+.btn-sairFila {
+  width: 4rem;
+  font-family: "Poppins";
+
+  width: 10rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem
+  
+}
+
+.btn-sairFila:hover {
+background-color: aqua;
+  
+}
+
+.label-numeroFila {
+  font-size: 0.8rem;
+  font-family: "Poppins";
+  color: white;
+  font-weight: 600;
+  padding-top: 0.5rem;
+}

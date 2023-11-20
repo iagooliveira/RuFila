@@ -1,0 +1,64 @@
+<mat-toolbar class="toolbar">
+  <img class="img-toolbar" src="assets/header.png" alt="" />
+</mat-toolbar>
+
+<section class="section-principal">
+  <div class="container-imagem-logo">
+    <img class="logo-ruFila" src="assets/logo.png" alt="" />
+  </div>
+
+  <div class="container-selects">
+    <mat-form-field appearance="fill" class="fild-container">
+      <mat-label class="label-select-restaurante">Aluno</mat-label>
+      <mat-select class="select-restaurante" [formControl]="formsAluno">
+        <mat-option
+          class="option-restaurante"
+          *ngFor="let aluno of listaAlunos"
+          [value]="aluno.matricula"
+          >{{ aluno.matricula }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="fild-container">
+      <mat-label class="label-select-restaurante">Restaurante</mat-label>
+      <mat-select class="select-restaurante" [formControl]="formsRestaurante">
+        <mat-option
+          class="option-restaurante"
+          *ngFor="let restaurante of listaRestaurantes"
+          [value]="restaurante.codigo"
+          >{{ restaurante.nome }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="fild-container">
+      <mat-label class="label-select-restaurante">Almoço</mat-label>
+      <mat-select class="select-restaurante" [formControl]="formsPrato">
+        <mat-option
+          class="option-restaurante"
+          *ngFor="let prato of listaPratos"
+          [value]="prato.codigo"
+          >{{ prato.principal }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+
+    <button class="btn-cardapio" mat-raised-button (click)="openDialog()">Ver fila</button>
+  </div>
+
+  <div class="container-numeroFila">
+    <p class="label-numeroFila">Pessoas na fila:</p>
+    <p class="num-fila">{{listaAlunoFila.length}}</p>
+
+    <button class="btn-sairFila" (click)="onEntrarFila()" mat-raised-button>
+      Entrar na Fila
+    </button>
+
+  </div>
+</section>
+
+<footer class="container-footer">
+  <app-botao-voltar style="position: relative; bottom: -86px; left: 112px;" [rota]="rotaVoltar" ></app-botao-voltar>
+  <img class="imagem-footer" src="assets/footer.png" alt="" />
+</footer>

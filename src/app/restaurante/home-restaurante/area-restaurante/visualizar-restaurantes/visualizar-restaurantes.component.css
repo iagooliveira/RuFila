@@ -1,0 +1,80 @@
+.toolbar {
+    background: transparent;
+    width: 100%;
+  }
+  
+  .img-toolbar {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    margin-left: -1rem;
+  }
+  
+  .container-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .imagem-footer {
+    width: 100%;
+  }
+  
+  .section-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 35rem;
+  
+  }
+  
+  .container-imagem-logo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .logo-ruFila {
+    margin-top: -3rem;
+    width: 13rem;
+  }
+  
+  .card-dados {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    margin-top: -3rem;
+    width: 17rem;
+    border-radius: 5px;
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    justify-content: space-around;
+  
+    background: #F5F5F5;
+  }
+  
+  .container-input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-input {
+    width: 14rem;
+  }
+  
+  .btn-menu {
+    background: #2644ea;
+    font-family: "Poppins";
+    color: white;
+    width: 10rem;
+  }
+  
+  .tituloDiv {
+
+  }
