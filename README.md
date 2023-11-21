@@ -1,6 +1,6 @@
 # Frontend do Trabalho de Sis Web
 
-#### Grupo: Bruno de Lucas Santos Barbosa, Caio Nascimento, Gominho
+#### Grupo: Bruno de Lucas Santos Barbosa, Caio Nascimento, Milena Elen Limoeiro do Espirito Santo
 
 ---
 
