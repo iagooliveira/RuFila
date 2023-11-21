@@ -1,6 +1,6 @@
 # Frontend do Trabalho de Sis Web
 
-#### Grupo: Caio Nascimento
+#### Grupo: Bruno de Lucas Santos Barbosa, Caio Nascimento, Gominho
 
 ---
 
