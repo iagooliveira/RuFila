@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
 
-  URL_REQ: 'localhost',
-  URL_PC_REMOTO: 'localhost',
+  URL_REQ: '192.168.15.9',
+  URL_PC_REMOTO: '192.168.15.9',
 };
 
 /*

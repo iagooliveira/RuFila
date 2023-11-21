@@ -11,24 +11,12 @@
       <div class="container-selects">
         <mat-form-field appearance="fill" class="fild-container">
           <mat-label class="label-select-restaurante">Restaurante</mat-label>
-          <mat-select class="select-restaurante" [formControl]="formsCardapio" >
+          <mat-select class="select-restaurante" [formControl]="formsRestaurante">
             <mat-option
               class="option-restaurante"
-              *ngFor="let cardapio of listaCardapios"
-              [value]="cardapio.codigo"
-              (click)="onSelecionaCardapios(cardapio.restaurante_codigo)"
-              >{{ cardapio.restaurante_codigo }}</mat-option
-            >
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="fild-container">
-          <mat-label class="label-select-restaurante">Data do Cardápio</mat-label>
-          <mat-select class="select-restaurante">
-            <mat-option
-              class="option-restaurante"
-              *ngFor="let data of listaDatas"
-              [value]="data.codigo"
-              >{{ data.data_cardapio }}</mat-option
+              *ngFor="let restaurante of listaRestaurantes"
+              [value]="restaurante.codigo"
+              >{{ restaurante.nome }}</mat-option
             >
           </mat-select>
         </mat-form-field>
@@ -40,7 +28,7 @@
                 *ngFor="let prato of listaPratos"
                 [value]="prato.codigo"
                 (click)="openDialog(prato.codigo)"
-                >{{ prato.codigo }}</mat-option
+                >{{ prato.principal }}</mat-option
               >
             </mat-select>
           </mat-form-field>
