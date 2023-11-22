@@ -52,6 +52,7 @@ export class EntrarFilaService {
   }
 
   entrarFilaAluno(alunoMatricula: string, codigoFila: number, posicao: number): Observable<any> {
+    console.log('------ ENTRAR FILA ALUNO SERVICE POST -------: ', alunoMatricula, codigoFila, posicao);
     return this.http.post<any>(`http://${environment.URL_PC_REMOTO}:3005/aluno_fila`, {
       alunoMatricula: alunoMatricula,
       codigoFila: codigoFila,

@@ -73,13 +73,18 @@ export class EntrarFilaComponent implements OnInit {
 
   onEntrarFila() {
     this.ultimaPosicao1 = this.ultimaPosicao1 + 1;
-    console.log('ULTIMAPOS11', this.ultimaPosicao1);
     const idRestaurante = this.formsRestaurante.value;
     const idAluno = this.formsAluno.value;
+    console.log('ULTIMAPOSICAO ANTES CRIAR FILA: ', this.ultimaPosicao1);
+    console.log('IDRESTAURANTE ANTES CRIAR FILA: ', idRestaurante);
+    console.log('IDALUNO ANTES CRIAR FILA: ', idAluno);
     this.entrarFilaService
       .criarFila(idRestaurante, 30, this.ultimaPosicao1, this.currentDate)
       .subscribe((dados) => {
-        //console.log(dados);
+        console.log("--------- CRIOU FILA ---------");
+        console.log('ID ALUNO: ', idAluno);
+        console.log('ID RESTAURANTE: ', idRestaurante);
+        console.log('ULTIMAPOSICAO DEPOIS CRIAR FILA: ', this.ultimaPosicao1);
       });
 
     setTimeout(() => {
@@ -87,24 +92,29 @@ export class EntrarFilaComponent implements OnInit {
         .getIdByUltimaPosicao(this.ultimaPosicao1)
         .subscribe((dados) => {
           this.codigoFila = dados.data[0].codigo;
-          //console.log(this.codigoFila);
+          console.log('-------- GET ID BY ULTIMAPOSICAO ---------');
+          console.log('CODIGO FILA: ', this.codigoFila);
+          console.log('IDALUNO: ', idAluno);
+          console.log('ULTIMAPOSICAO: ', this.ultimaPosicao1);
         });
-    }, 900);
-
+    }, 100);
+    
     setTimeout(() => {
+      console.log('-------- ENTRAR FILA SETTIMEOUT -------: ');
       this.entrarFilaService
         .entrarFilaAluno(idAluno, this.codigoFila, this.ultimaPosicao1)
         .subscribe((dados) => {
           console.log(
-            'idAluno: ',
+            '--------- PRINT NA HORA QUE ALUNO ENTRA NA FILA: -----------',
+            'ID ALUNO: ',
             idAluno,
-            'codigoDaFila: ',
+            'CODIGO FILA: ',
             this.codigoFila,
-            'ultimaposicao: ',
+            'ULTIMA POSICAO: ',
             this.ultimaPosicao1
           );
         });
-    }, 1400);
+    }, 1500);
 
     this.snackBar.open(
       `Entrou na fila! Ficha: ${this.listaAlunoFila.length + 1}`,
@@ -119,7 +129,7 @@ export class EntrarFilaComponent implements OnInit {
     setTimeout(() => {
       console.log(this.ultimaPosicao1);
       location.reload();
-    }, 1350);
+    }, 1550);
   }
 
   rotaSairFila(): void {
